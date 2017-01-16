@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe src="http://www.ustream.tv/embed/22268722?html5ui&volume=0&showtitle=false" class="embed-responsive-item" webkitallowfullscreen allowfullscreen></iframe><a href="http://www.ustream.tv/" title="Online video platform by Ustream" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: left;" target="_blank">Online Video Platform</a>
+</div>
+
+<h1 class="text-center">Meet the Hens</h1>
+<br />
+<ul class="media-list">
+  {% for chicken in site.chickens %}
+  <div class="row" style="padding: 40px">
+    <div class="col-sm-8 {% cycle '','col-sm-push-4' %}">
+      <img class="media-object img-responsive img-circle" src="{{ "/assets/chicken.jpg" | relative_url }}">
+    </div>
+    <div class="col-sm-4 {% cycle '','col-sm-pull-8' %} text-center" style="padding-top: 20px">
+      <h1 class="media-heading branding">{{ chicken.name }}</h1>
+      <h2><small>{{ chicken.breed }} {{ chicken.gender }}</small></h2>
+      Born {{ chicken.birth_date | date: "%B %-d, %Y" }}.
+      <br/><br/>
+      {{ chicken.content }}
+    </div>
+  </div>
+  {% endfor %}
+</ul>
+
+<h1 class="text-center">Fresh &amp; Organic</h1>
+
+<img class="media-object" src="{{ "/assets/garden.jpg" | relative_url }}" style="width:100%">
+
+<img class="media-object" src="{{ "/assets/layout.jpg" | relative_url }}" style="width:100%">

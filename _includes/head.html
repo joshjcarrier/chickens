@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ "/assets/bootstrap.min.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+
+  <style type="text/css">
+    body {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,b3d5f1+64,c5e8c5+100 */
+      background: #ffffff; /* Old browsers */
+      background: -moz-linear-gradient(top,  #ffffff 0%, #b3d5f1 64%, #c5e8c5 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  #ffffff 0%,#b3d5f1 64%,#c5e8c5 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  #ffffff 0%,#b3d5f1 64%,#c5e8c5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c5e8c5',GradientType=0 ); /* IE6-9 */
+
+    }
+
+    .vcenter {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
+
+    .branding, .branding-sigil {
+      font-family: 'Yellowtail'
+    }
+
+    .branding-sigil {
+      color: #a17f1a
+    }
+  </style>
+</head>
